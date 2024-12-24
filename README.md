@@ -60,7 +60,7 @@ Getting started is super simple! Here are two ways to run TRV Solutions POS:
 > You can set Apache and MySQL to start automatically with your computer. Open XAMPP's Control Panel, and in the Service column, check the box next to each module (run XAMPP as administrator first).
 
 ### 2️⃣ Quick Test with VS Code’s PHP Server Extension:
-1. Install the (PHP Server)[https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver] extension in VS Code.
+1. Install the [PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver) extension in VS Code.
 2. Open the **/trv** folder and start the PHP server.
 3. Access the system via the provided localhost link.
 
