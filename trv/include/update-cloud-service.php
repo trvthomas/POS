@@ -1,0 +1,1 @@
+<?php echo '{"result":"Service no longer supported"}'; ?>
