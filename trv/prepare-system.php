@@ -97,7 +97,7 @@ if ($result->num_rows > 0) {
 					<h3 class="is-size-5 has-text-centered">Restore Backup</h3>
 					<hr><br>
 
-					<p>If there are backup copies, they will be displayed below. If you want to <b>restore the data</b> of your POS System, locate the backup copy, open the file, and follow the instructions, otherwise click "Next".</p>
+					<p>If there are backup copies, they will be displayed below. If you want to <b>restore the data</b> of your POS System, locate the backup copy and import it into the database, otherwise click "Next".</p>
 
 					<table class="table is-striped is-fullwidth">
 						<tr>

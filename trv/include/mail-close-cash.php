@@ -11,8 +11,6 @@ include_once 'PHPMailer/SMTP.php';
 $existeError = false;
 $emailSent = false;
 
-date_default_timezone_set("America/Bogota");
-
 if (isset($_POST["sendDaySummaryEmail"]) && isset($_POST["sendDaySummaryDesign"]) && connection_status() == 0) {
 	//Get backup info
 	$backupName = "";

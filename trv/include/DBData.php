@@ -26,6 +26,7 @@ if ($resultVerPS->num_rows <= 0) {
 
 $prefixCoookie = "trv";
 
-date_default_timezone_set("America/Bogota");
+/* Timezone - Modify accordingly */
+date_default_timezone_set("America/Los_Angeles");
 
 include_once "convertJson.php";

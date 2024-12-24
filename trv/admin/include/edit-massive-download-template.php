@@ -1,54 +1,57 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT'] . "/trv/admin/include/verifySession.php";
-	include_once $_SERVER['DOCUMENT_ROOT'] . "/trv/admin/include/prods-export/SimpleXLSXGen.php";
-	
-	use Shuchkin\SimpleXLSXGen;
-	
-	$existeError = false;
-	
-	if(isset($_POST["downloadTemplateToken"]) && $_POST["downloadTemplateToken"] == "exz27"){
+include_once $_SERVER['DOCUMENT_ROOT'] . "/trv/admin/include/prods-export/SimpleXLSXGen.php";
+
+use Shuchkin\SimpleXLSXGen;
+
+$existeError = false;
+
+if (isset($_POST["downloadTemplateToken"]) && $_POST["downloadTemplateToken"] == "exz27") {
 	$data = [
-	['<center><b>INSTRUCCIONES EDICIÓN MASIVA DE PRODUCTOS</b></center>'],
-	[''],
-	['En este archivo encontrará una planilla para editar masivamente los productos de su catálogo en su Sistema POS.'],
-	['<b>Por favor lea detalladamente estas instrucciones para evitar conflictos al momento de importar los productos.</b>'],
-	[''],
-	['Al ingresar a la hoja "Lista de productos" encontrará los campos correspondientes para editar los artículos. Se compone de 7 columnas:'],
-	[''],
-	['', '--->', '--->', '--->', '--->', ''],
-	['<center><b>ID (NO MODIFICAR)</b></center>', '<center><b>Nombre del producto</b></center>', '<center><b>Precio de venta</b></center>', '<center><b>Precio de compra</b></center>', '<center><b>Categoría</b></center>', '<center><b>Código de barras</b></center>'],
-	['<b>Por favor NO MODIFIQUE esta columna.</b>', 'Escriba el nombre del artículo.', 'Escriba el precio de venta con impuestos incluidos.', 'Escriba el precio de compra del artículo.', 'Ingrese el código de la categoría correspondiente.', 'Código de barras del producto.'],
-	['<b>Este es el identificador de cada uno de los productos.</b>', '', 'NO incluya puntos ni comas.', 'NO incluya puntos ni comas.', '<b>Ingrese a su Sistema POS para ver los códigos disponibles.</b>', 'Preferiblemente sin espacios ni caracteres especiales.'],
-	[''],
-	[''],
-	['<center><b>RECOMENDACIONES</b></center>'],
-	[''],
-	['Por favor no modifique los encabezados, de lo contrario se omitirá la actualización de los productos.'],
-	[''],
-	['No deje espacios en blanco, todos los campos son obligatorios. Si el precio de venta es 0, escriba ese valor en el recuadro.'],
-	[''],
-	['Revise la categoría de los productos a agregar, si esta no existe, el/los artículo/s no se modificarán.']
+		['<center><b>INSTRUCTIONS FOR MASSIVE PRODUCT UPLOAD</b></center>'],
+		[''],
+		['In this file you will find a template to massively upload products to your catalog in your POS system.'],
+		['<b>Please read these instructions carefully to avoid conflicts when importing products.</b>'],
+		[''],
+		['When you enter the “Product List” sheet you will find the corresponding fields for importing items. It consists of 5 columns:'],
+		[''],
+		['', '--->', '--->', '--->', '--->', ''],
+		['<center><b>ID (DO NOT CHANGE)</b></center>', '<center><b>Product name</b></center>', '<center><b>Selling price</b></center>', '<center><b>Purchase price</b></center>', '<center><b>Category</b></center>', '<center><b>Barcode</b></center>'],
+		['<b>Please DO NOT MODIFY this column.</b>', 'Enter the name of the item.', 'Enter the selling price including taxes.', 'Enter the purchase price of the item.', 'Enter the corresponding category code.', 'Product barcode.'],
+		['<b>This is the identifier for each of the products.</b>', '', 'DO NOT include dots or commas.', 'DO NOT include dots or commas.', '<b>Log in to your POS System to see the available codes.</b>', 'Preferably without spaces or special characters.'],
+		[''],
+		[''],
+		['<center><b>RECOMMENDATIONS</b></center>'],
+		[''],
+		['Please do not modify the headers, otherwise the product update will be skipped.'],
+		[''],
+		['Do not leave blank spaces, all fields are mandatory. If the selling price is 0, write that value in the box.'],
+		[''],
+		['Check the category of the products to be added, if it does not exist, the item(s) will not be modified.']
 	];
-	
+
 	$data2 = [
-	['<center><b>ID (NO MODIFICAR)</b></center>', '<center><b>Nombre del producto</b></center>', '<center><b>Precio de venta</b></center>', '<center><b>Precio de compra</b></center>', '<center><b>Categoría</b></center>', '<center><b>Código de barras</b></center>']
+		['<center><b>ID (DO NOT CHANGE)</b></center>', '<center><b>Product name</b></center>', '<center><b>Selling price</b></center>', '<center><b>Purchase price</b></center>', '<center><b>Category</b></center>', '<center><b>Barcode</b></center>']
 	];
-	
+
 	$sql = "SELECT * FROM trvsol_products";
 	$result = $conn->query($sql);
-	if($result->num_rows > 0){
-	while($row = $result->fetch_assoc()){
-	array_push($data2, ["<left>" . $row["id"] . "</left>", "<left>" . $row["nombre"] . "</left>", "<right>" . $row["precio"] . "</right>", "<right>" . $row["purchasePrice"] . "</right>", "<right>" . $row["categoryID"] . "</right>", "<right>" . $row["barcode"] . "</right>"]);
-	}}
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			array_push($data2, ["<left>" . $row["id"] . "</left>", "<left>" . $row["nombre"] . "</left>", "<right>" . $row["precio"] . "</right>", "<right>" . $row["purchasePrice"] . "</right>", "<right>" . $row["categoryID"] . "</right>", "<right>" . $row["barcode"] . "</right>"]);
+		}
+	}
 
 	$xlsx = new SimpleXLSXGen();
-	$xlsx->addSheet($data, 'Instrucciones' );
-	$xlsx->addSheet($data2, 'Lista de productos');
+	$xlsx->addSheet($data, 'Instructions');
+	$xlsx->addSheet($data2, 'Products list');
 	$xlsx->setDefaultFont('Arial');
 	$xlsx->setDefaultFontSize(12);
 	$xlsx->downloadAs('edicion-masiva-productos-' . date("Y-m-d-h-ia") . '.xlsx');
-	}else{
+} else {
 	$existeError = true;
-	}
-	
-	if($existeError == true){ echo "There was an error al generar la plantilla<br><a href= '/trv/home.php'>Volver al inicio</a>"; }
+}
+
+if ($existeError == true) {
+	echo "There was an error generating the template<br><a href='/trv/home.php'>Return to home</a>";
+}
 ?>

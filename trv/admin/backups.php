@@ -59,7 +59,7 @@ if ($scanBackups[2]) {
 
 				<hr>
 				<h3 class="is-size-5" style="margin-bottom: 0">Current Backups</h3>
-				<p>To restore data from a specific backup, locate the backup copy, open the file, and follow the instructions</p>
+				<p>To restore data from a specific backup, locate the backup copy and import it into the database</p>
 			</div>
 
 			<div class="list has-visible-pointer-controls"><?php echo $backupsList; ?></div>
