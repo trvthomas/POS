@@ -12,7 +12,7 @@ For Spanish speakers (and to avoid translating the whole repo), check out the [S
 - Easy setup with XAMPP for a permanent, reliable solution.
 - Simple, intuitive interface tailored for small businesses and non-tech-savvy users.
 - Lightweight and efficient—designed to get the job done.
->![Mockup 1](https://github.com/user-attachments/assets/21f1180f-61a3-4725-8df8-adfdc89b2342)
+![Mockup 1](https://github.com/user-attachments/assets/21f1180f-61a3-4725-8df8-adfdc89b2342)[^2]
 
 ### Functional
 - User permissions (seller, inventory staff, administrator)
@@ -40,14 +40,14 @@ For Spanish speakers (and to avoid translating the whole repo), check out the [S
     - Gift/exchange tickets
     - Discount limits
 - Many more!
->![Mockup 2](https://github.com/user-attachments/assets/f7b7d59c-1166-4fc2-b318-c3d44cafbc3c)
+![Mockup 2](https://github.com/user-attachments/assets/f7b7d59c-1166-4fc2-b318-c3d44cafbc3c)[^2]
 
 ## History 📖
 This project holds a special place in my journey as a developer. It started as a way to learn and experiment, and over the years, it became something much bigger.
 
 From 2018 to 2023, I dedicated a lot of time and effort to this project, constantly improving it until I decided to shift my focus to new adventures. While I’m no longer updating it, you’re more than welcome to use it, fork it, improve it, and keep it alive.
 
-![Mockup 3](https://github.com/user-attachments/assets/ce089eab-4709-4c75-8842-f3bfc9c97cdf)
+![Mockup 3](https://github.com/user-attachments/assets/ce089eab-4709-4c75-8842-f3bfc9c97cdf)[^2]
 
 ## Installation & Setup ⚙️
 Getting started is super simple! Here are two ways to run TRV Solutions POS:
@@ -87,4 +87,4 @@ Here are a few challenges you can try with TRV Solutions POS System:
 - Migrate it to a modern framework for a fun tech refresh.
 
 [^1]: Requires your own mail server
-Images disclaimer: You might be thinking, *"Wait, didn’t they say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are—enjoy the aesthetic! 😄
+[^2]: Images disclaimer: You might be thinking, *"Wait, didn’t they say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are—enjoy the aesthetic! 😄
