@@ -1071,7 +1071,6 @@ if ($result3->num_rows > 0) {
 			var receivedTotal = document.getElementById("cambioInput").value;
 			var receivedEf = document.getElementById("multipagoEfectivo").value;
 			var receivedTa = document.getElementById("multipagoTarjeta").value;
-			var receivedOt = document.getElementById("multipagoOther").value;
 			var notes = document.getElementById("notasInput").value;
 			var modifyChangeTickets = document.getElementById("numeroTicketsCambioPrint").value;
 			modifyChangeTickets++;
@@ -1082,8 +1081,12 @@ if ($result3->num_rows > 0) {
 			receivedEf--;
 			receivedTa++;
 			receivedTa--;
+			var receivedOt = 0;
+			<?php if ($metodoPagoPersonalizado != "") { ?>
+			receivedOt = document.getElementById("multipagoOther").value;
 			receivedOt++;
 			receivedOt--;
+			<?php } ?>
 
 			var multipagoTotalReceived = receivedEf + receivedTa + receivedOt;
 

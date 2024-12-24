@@ -140,7 +140,7 @@ if (isset($_GET["id"])) {
 							</div>
 
 							<div id="divVariablePrice" style="display: none">
-								<div class="notification is-light is-info">- Configure the list of sale prices that this product can have below.
+								<div class="notification is-light is-info">- Configure the list of selling prices that this product can have below.
 									<br>- The seller can select from the <b>price list</b> or set a <b>custom value greater than the established minimum</b>
 								</div>
 

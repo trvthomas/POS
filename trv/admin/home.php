@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
 
 			<div class="column is-one-third">
 				<div class="box is-shadowless pastel-bg-green">
-					<h4 class="is-size-6">MOnthly Income</h4>
+					<h4 class="is-size-6">Monthly Income</h4>
 					<h3 class="is-size-3"><i class="fas fa-sack-dollar fa-fw"></i> <span id="statsSalesMoney">...</span></h3>
 				</div>
 			</div>
