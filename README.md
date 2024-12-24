@@ -71,7 +71,8 @@ The system will guide you through the setup steps the first time you open it.
 To enable email functionality, you’ll need to configure the email server settings. This can be done by editing the **DBData.php** file (located inside the **include** folder) and updating the constants for your email server.
 Additionally, you can set the correct timezone in the same file to ensure accurate timestamps for transactions and reports.
 
-*Note:* While TRV Solutions POS has been extensively tested on Windows systems, there might be slight errors or edge cases. Additionally, it has not been tested on other operating systems, so compatibility may vary.
+> [!NOTE]
+> While TRV Solutions POS has been extensively tested on Windows systems, there might be slight errors or edge cases. Additionally, it has not been tested on other operating systems, so compatibility may vary.
 
 ## Contributing 💡
 I’m no longer actively maintaining this project, but I’d love to see what others can do with it! Feel free to:
@@ -86,4 +87,4 @@ Here are a few challenges you can try with TRV Solutions POS System:
 - Migrate it to a modern framework for a fun tech refresh.
 
 [^1]: Requires your own mail server
-[^2]: Images disclaimer: You might be thinking, *"Wait, didn’t they say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are—enjoy the aesthetic! 😄
+Images disclaimer: You might be thinking, *"Wait, didn’t they say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are—enjoy the aesthetic! 😄
