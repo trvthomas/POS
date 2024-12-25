@@ -79,6 +79,8 @@ I’m no longer actively maintaining this project, but I’d love to see what ot
 - Fork this project and make it your own.
 - Submit pull requests with improvements or bug fixes.
 - Share your thoughts, ideas, or use cases in the Issues tab.
+> [!NOTE]
+> Since this project was originally developed in Spanish, most backend variables, database tables, and column names are in Spanish. While the interface is in English, contributors might encounter Spanish terms in the codebase and database structure. Feel free to refactor and adapt as needed!
 
 ## Want More Fun? 🛠️
 Here are a few challenges you can try with TRV Solutions POS System:
