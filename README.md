@@ -86,7 +86,10 @@ I’m no longer actively maintaining this project, but I’d love to see what ot
 Here are a few challenges you can try with TRV Solutions POS System:
 - Add a dark mode to the UI (*PS* Bulma now released its 1.x version with automatic dark mode support).
 - Create additional features like customer database or gift cards.
-- Migrate it to a modern framework for a fun tech refresh.
+- Migrate it to a modern framework for a tech refresh.
+
+> [!IMPORTANT]
+> I started this project with the intention of improving my programming skills, so don't be shocked if some (or perhaps many) variables, functions, and the syntax in general are a bit messy and don't completely follow coding best practices. 😅 (I've improved since then, by the way).
 
 [^1]: Requires your own mail server
-[^2]: Images disclaimer: You might be thinking, *"Wait, didn’t they say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are—enjoy the aesthetic! 😄
+[^2]: Images disclaimer: You might be thinking, *"Wait, didn’t he say this hasn’t been tested on anything other than Windows? So why are there Mac mockups in the images?"* Well, the truth is, I just couldn’t find decent Windows mockups. So here we are, enjoy the aesthetic! 😄
